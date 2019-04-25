@@ -1,4 +1,4 @@
-<div id="home">
+{{!-- <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
@@ -6,14 +6,21 @@
         <h2>The Meme Factory</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Example Text">
+
+            <label for="example-text">Title of meme</label>
+            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Enter Example Description"></textarea>
+            <label for="example-text">Image</label>
+            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            <label for="example-text">Description</label>
+            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Author</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
           </div>
           <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
@@ -21,7 +28,8 @@
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
+            <a href="example/{{this.id}}">{{this.title}}<br>
+              <img src={{this.image}}><br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
@@ -31,7 +39,83 @@
   </div>
 </div>
 
-{{!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script> --}}
 
-{{!-- //<!-- End comScore Tag --><meta content="tTfJYA/1z33+pDLZl6+c3nJlskqmdg6OMrlffIADlfE=" name="verify-v1"><link href="http://feeds.urbandictionary.com/UrbanWordOfTheDay" title="Urban Word of the Day"><link href="/favicon.ico" rel="shortcut icon"><link href="/favicon.ico" rel="icon"><link href="/osd.xml" rel="search" title="Urban Dictionary Search" type="application/opensearchdescription+xml"><meta content="169142139769391" property="fb:app_id"><meta content="Ordering an item on Amazon and claiming it never arrived to your home which results in a refund and you can keep the item." name="Description" property="og:description" /><meta content="Ordering an item on Amazon and claiming it never arrived to your home which results in a refund and you can keep the item." name="twitter:description" /><meta content="Urban Dictionary, April 25: scamazon" name="twitter:title" /><meta content="Urban Dictionary, April 25: scamazon" property="og:title" /><meta content="@urbandictionary" name="twitter:site"><meta content="Urban Dictionary" property="og:site_name"></head><body class="generated"><div id="ud-root"><div id="urban-top-bar"><div class="row"><nav class="top-bar" data-options="mobile_show_parent_link: false" data-topbar="" role="navigation"><ul class="title-area"><li class="name"><a href="/" id="logo" style="display: block; width: 150px; height: 52px; background-size: contain; background-repeat: no-repeat; background-image: url(&apos;https://d2gatte9o95jao.cloudfront.net/assets/logo-1b439b7fa6572b659fbef161d8946372f472ef8e7169db1e47d21c91b410b918.svg&apos;); z-index: 1; position: relative"></a></li><li class="toggle-topbar"><a href="#"><span class="ud_menu"><i class="svgicon svgicon-ud_menu"><svg viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="3" rx="2"/><rect y="7" width="20" height="3" rx="2"/><rect y="14" width="20" height="3" rx="2"/></svg></i></span><span class="ud_x"><i class="svgicon svgicon-ud_x"><svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.142 5.704L3.022.584c-.674-.674-1.277-.186-1.95.487-.674.674-1.162 1.277-.489 1.95l5.12 5.121-5.12 5.12c-.673.674-.185 1.278.488 1.951s1.277 1.161 1.95.488l5.121-5.12 5.12 5.12c.674.673 1.278.186 1.951-.488.674-.673 1.161-1.277.488-1.95l-5.12-5.12 5.12-5.121c.673-.674.185-1.278-.488-1.95-.673-.674-1.277-1.162-1.95-.489l-5.12 5.12z"/></svg></i></span></a></li></ul><section class="top-bar-section"><ul class="left" id="main_nav"><li class="has-dropdown"><a href="javascript:void(0)">Browse</a><ul class="dropdown alphabet-dropdown" id="browse_nav"><li><a href="/popular.php?character=A">A</a></li><li><a href="/popular.php?character=B">B</a></li><li><a href="/popular.php?character=C">C</a></li><li><a href="/popular.php?character=D">D</a></li><li><a href="/popular.php?character=E">E</a></li><li><a href="/popular.php?character=F">F</a></li><li><a href="/popular.php?character=G">G</a></li><li><a href="/popular.php?character=H">H</a></li><li><a href="/popular.php?character=I">I</a></li><li><a href="/popular.php?character=J">J</a></li><li><a href="/popular.php?character=K">K</a></li><li><a href="/popular.php?character=L">L</a></li><li><a href="/popular.php?character=M">M</a></li><li><a href="/popular.php?character=N">N</a></li><li><a href="/popular.php?character=O">O</a></li><li><a href="/popular.php?character=P">P</a></li><li><a href="/popular.php?character=Q">Q</a></li><li><a href="/popular.php?character=R">R</a></li><li><a href="/popular.php?character=S">S</a></li><li><a href="/popular.php?character=T">T</a></li><li><a href="/popular.php?character=U">U</a></li><li><a href="/popular.php?character=V">V</a></li><li><a href="/popular.php?character=W">W</a></li><li><a href="/popular.php?character=X">X</a></li><li><a href="/popular.php?character=Y">Y</a></li><li><a href="/popular.php?character=Z">Z</a></li><li><a href="/browse.php?character=*">#</a></li><li><a href="/yesterday.php">new</a></li></ul></li><li><a href="/vote.php">Vote</a></li><li><a href="https://urbandictionary.store/" id="store-link">Store</a></li></ul><ul class="right"><li class="has-dropdown show-for-medium-up"><a href="javascript:void(0)">Cart</a><ul class="dropdown cart-dropdown"><li class="cart-component"></li></ul></li></ul></section></nav></div><div class="row"><div class="columns search-and-actions"><div class="main-search"><form action="/search.php" class="snowplow-ignore" id="search_form" method="POST"><input aria-label="Search for a word" autocapitalize="off" autocomplete="off" autocorrect="off" class="autocomplete form-control" id="term" name="term" placeholder="Type any word..." tabindex="1" type="text"></form></div><div class="main-actions"><a class="circle-button" href="/add.php"><i class="svgicon svgicon-add202"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M42.939 19.742H28.505V5.319c0-2.283-1.842-4.134-4.125-4.134s-4.124 1.851-4.124 4.135v14.432H5.814a4.137 4.137 0 0 0-4.138 4.135 4.145 4.145 0 0 0 1.207 2.934 4.122 4.122 0 0 0 2.92 1.222h14.453v14.411a4.11 4.11 0 0 0 1.201 2.923 4.11 4.11 0 0 0 2.919 1.211 4.13 4.13 0 0 0 4.129-4.134V28.042h14.434c2.283 0 4.134-1.867 4.133-4.15 0-2.282-1.851-4.15-4.133-4.15z"/></svg></i></a><a class="circle-button" href="/random.php" onclick="document.location = &quot;/random.php?page=&quot; + Math.ceil(Math.random() * 1000); return false"><i class="svgicon svgicon-ud_shuffle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34"><path d="M26.9 22.6h-1.2c-2.4 0-4.2-1.2-5.9-3-.2.2-.3.4-.5.7-.8 1-1.6 2-2.4 3.1 2.3 2.2 5.1 3.9 8.9 3.9H27v4.1l7.1-6.1-7.1-6.1v3.4zM9.2 14.4c.3-.3.5-.7.8-1.1l2.1-2.7C9.9 8.5 7.2 7 3.6 7H0v4.8h3.6c2.2-.1 4 1 5.6 2.6zm16.5-3h1.2v3.4L34 8.7l-7.1-6.1v4.1h-1.2c-6.3 0-9.8 4.6-12.9 8.7-2.8 3.7-5.2 6.9-9.2 6.9H0V27h3.6c6.3 0 9.8-4.6 12.9-8.7 2.8-3.7 5.2-6.9 9.2-6.9z"/></svg></i></a><a class="circle-button account-button" href="/users.php"><i class="svgicon svgicon-user58"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M31.941 36.688c-7.102 0-12.856-6.898-12.856-15.401 0-8.502 5.754-14.804 12.856-14.804 7.103 0 12.862 6.302 12.862 14.804 0 8.503-5.759 15.401-12.862 15.401zm-19.998 20.82s-2.727.18-3.928-1.475c-.649-.894-.197-2.706.247-3.717l1.087-2.477s3.006-6.723 6.428-10.619c2.102-2.389 4.602-1.845 6.219-1.068.996.478 2.122 1.871 2.945 2.609 1.134 1.017 3.136 2.173 6.409 2.238h2.008c3.271-.065 5.273-1.221 6.406-2.238.822-.738 1.917-2.174 2.904-2.668 1.484-.743 3.743-1.2 5.79 1.127 3.423 3.896 6.134 10.741 6.134 10.741l1.114 2.429c.461 1.004.933 2.807.302 3.713-1.126 1.62-3.654 1.405-3.654 1.405H11.943z"/></svg></i></a></div></div></div></div><div class="show-for-medium-up" id="dark_top"><div data-ad-slot="UD_ROS_728x90_ATF_Flex" id="UD_ROS_728x90_ATF_Flex" style="text-align: center"><script type="text/javascript">dfpTry(function() { googletag.display('UD_ROS_728x90_ATF_Flex')})</script><span class="bt-uid-tg" data-style="width: 728px; height: 90px; display: block; margin: 0 auto" data-uid="5c31059d92-257" style="display: none !important"></span></div></div><div id="outer"><div class="three-columns"><div class="row" data-equalizer><div class="small-12 large-8 columns" data-equalizer-watch><div id="content"><script type="application/ld+json"> --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">The Meme Factory</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <h2>The Meme Factory</h2>
+
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Add Meme Title</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Link to Photo Image (Required)</label>
+            <input type="text" class="form-control" id="image">
+          </div>
+        </form>
+
+        <div class="form-group">
+          <label for="example-description">Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="example-description">Example:</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="example-text">Author</label>
+          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+        </form>
+
+        <br>
+        <h3>Examples:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.title}}<br>
+              <img src={{this.image}}><br>{{this.author}}<br>{{this.createdAt}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous">
+<script src="/public/js/index.js"></script>
