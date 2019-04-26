@@ -13,12 +13,23 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       defaultValue: "Anonymous"
     },
+    description: {
+      type: DataTypes.TEXT
+    },
+    author: {
+      type: DataTypes.STRING
+    },
+    example: {
+      type: DataTypes.STRING
+    },
     likesNum: {
       type: DataTypes.INTEGER
     },
     dislikesNum: {
       type: DataTypes.INTEGER
-    }
+    },
+
+
   });
   return Meme;
 };

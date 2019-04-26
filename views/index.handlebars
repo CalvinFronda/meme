@@ -1,47 +1,3 @@
-{{!-- <div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>The Meme Factory</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <<<<<<< HEAD=======>>>>>>> 5214b58b8509a187fd89faa6656d6c83be0724dd
-              <label for="example-text">Title of meme</label>
-              <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-text">Image</label>
-            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-text">Description</label>
-            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Author</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.title}}<br>
-              <img src={{this.image}}><br>{{this.author}}<br>{{this.createdAt}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script> --}}
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">The Meme Factory</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -68,7 +24,7 @@
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Add Meme Title</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
 
           <div class="form-group">
@@ -79,29 +35,30 @@
 
         <div class="form-group">
           <label for="example-description">Description</label>
-          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
         </div>
 
         <div class="form-group">
-          <label for="example-description">Example:</label>
-          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+          <label for="example">Example:</label>
+          <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
         </div>
 
         <div class="form-group">
           <label for="example-text">Author</label>
-          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          <input type="text" id="author" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
         </div>
+
         <button id="submit" class="btn btn-primary float-right">Submit</button>
 
         </form>
 
         <br>
         <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
+        <ul id="list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.title}}<br>
-              <img src={{this.image}}><br>{{this.author}}<br>{{this.createdAt}}</a>
+              <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
@@ -113,9 +70,9 @@
     </div>
   </div>
 </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
   crossorigin="anonymous">
-<script src="/public/js/index.js"></script>
+<script src="js/index.js"></script>
