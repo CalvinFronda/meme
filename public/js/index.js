@@ -39,12 +39,15 @@ var refreshExamples = function () {
     console.log(data);
 
 
+
     var memes = data.map(function ({ title, image, author, id, description, example, }) {
       var $title = $("<h1>").text(title),
         $image = $("<img>").attr("src", image),
-        $author = $("<h3>").text(author),
+        $wordOne = $("<h5>").text("Author: "),
+        $author = $("<h6>").html(author), 
+        $wordTwo = $("<h5>").text("Description: "),
         $description = $("<h6>").text(description),
-        $word = $("<h5>").text("Example: "),
+        $wordThree = $("<h5>").text("Example: "),
         $example = $("<h6>").text(example);
 
 
@@ -53,7 +56,7 @@ var refreshExamples = function () {
           class: "list-group-item",
           "data-id": id,
         })
-        .append($title, $image, $author, $description, $word, $example);
+        .append($title, $image, $wordOne, $author, $wordTwo, $description, $wordThree, $example);
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
@@ -110,6 +113,34 @@ var handleDeleteBtnClick = function () {
     refreshExamples();
   });
 };
+
+
+//BUTTON LIKE & DISLIKE
+$('.btn-counter').on('click', function(event, count) {
+  event.preventDefault();
+  
+  var $this = $(this),
+      count = $this.attr('data-count'),
+      active = $this.hasClass('active'),
+      multiple = $this.hasClass('multiple-count');
+  
+  // First method, allows to add custom function
+  // Use when you want to do an ajax request
+  /* if (multiple) {
+  $this.attr('data-count', ++count);
+  // Your code here
+  } else {
+  $this.attr('data-count', active ? --count : ++count).toggleClass('active');
+  // Your code here
+  } */
+  
+  // Second method, use when ... I dunno when but it looks cool and that's why it is here
+  $.fn.noop = $.noop;
+  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
+  
+});
+
+
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
