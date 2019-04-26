@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">The Meme Factory</a>
+  <a class="navbar-brand" href="#">The Meme Factory</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/create">Create <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
@@ -20,38 +20,6 @@
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
         <h2>The Meme Factory</h2>
-
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Add Meme Title</label>
-            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-
-          <div class="form-group">
-            <label for="photo">Link to Photo Image (Required)</label>
-            <input type="text" class="form-control" id="image">
-          </div>
-        </form>
-
-        <div class="form-group">
-          <label for="example-description">Description</label>
-          <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="example">Example:</label>
-          <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="example-text">Author</label>
-          <input type="text" id="author" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-        </div>
-
-        <button id="submit" class="btn btn-primary float-right">Submit</button>
-
-        </form>
-
         <br>
         <h3>Examples:</h3>
         <ul id="list" class="list-group">
