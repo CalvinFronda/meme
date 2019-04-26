@@ -3,11 +3,12 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
+        <h2>The Meme Factory</h2>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Title of meme</label>
-            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <<<<<<< HEAD=======>>>>>>> 5214b58b8509a187fd89faa6656d6c83be0724dd
+              <label for="example-text">Title of meme</label>
+              <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
           <div class="form-group">
             <label for="example-text">Image</label>
@@ -71,27 +72,30 @@
           </div>
 
           <div class="form-group">
-            <label for="example-url">Add Meme Image</label>
-            <input type="image.url" id="image" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <label for="photo">Link to Photo Image (Required)</label>
+            <input type="text" class="form-control" id="image">
           </div>
-
-          {{!app.post('/api/images', parser.single("image"), (req, res) => {
-          console.log(req.file) // to see what is returned to you
-          const image = {};
-          image.url = req.file.url;
-          image.id = req.file.public_id;
-          Image.create(image) // save image information in database
-          .then(newImage => res.json(newImage))
-          .catch(err => console.log(err));
-          });}}
-
-          <div class="form-group">
-            <label for="example-description">Meme Usage</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
         </form>
 
+        <div class="form-group">
+          <label for="example-description">Description</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="example-description">Example:</label>
+          <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="example-text">Author</label>
+          <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+        </div>
+        <button id="submit" class="btn btn-primary float-right">Submit</button>
+
+        </form>
+
+        <br>
         <h3>Examples:</h3>
         <ul id="example-list" class="list-group">
           {{#each examples}}
@@ -101,7 +105,7 @@
             <button class="btn btn-danger float-right delete">ｘ</button>
           </li>
           {{/each}}
-
+        </ul>
 
 
 
