@@ -3,16 +3,28 @@
 }
 
 #heads {
-  color: #5C9EDB; 
+  color: #cabb8a; 
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 
 
 }
 
+#heads1 {
+  color: #cabb8a; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 20px;
+  letter-spacing: 2px;
+
+
+
+}
+
 
 #submit {
-  color: #5C9EDB; 
+  color: #cabb8a; 
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
 
@@ -27,13 +39,77 @@
 text-align: center;
 padding: 20px;
 font-size: 35pt;
+margin-top: 27px;
 font-weight: bold;
-letter-spacing: 3px;
-color: #5A6374;
+letter-spacing: 3.5px;
+color: #cabb8a;
+} 
+
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #dcd0c0;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+.homeLink {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #383838;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#namebar {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #dcd0c0;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#image {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 
 
+
+
+/* #titleTop1 {
+    display: inline;
+    position: relative;
+    font: 200px Helvetica, Sans-Serif;
+    letter-spacing: -5px;
+    color: rgba(0,0,255,0.5); 
+  }
+  
+  #titleTop1:after {
+    content: "MEMEARY";
+    position: absolute; left: 10px; top: 5px;
+    color: rgba(255,0,0,0.5);   
+  } */
 
 
 
