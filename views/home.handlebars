@@ -1,5 +1,6 @@
 
 
+
   <nav class="navbar navbar-expand-lg" style="background-color:#383838">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -14,6 +15,7 @@
           <a class="nav-link" href="/create">CREATE+</a>
         </li>
       </ul>
+
 
     </div>
     <ul class="nav navbar-nav navbar-right">
@@ -41,8 +43,6 @@
           <h1>collection of awesome memes</h1>
         </div>
 
-
-
         {{!-- <h3 id="heads1">MEMES:</h3> --}}
         <ul id="list" class="list-group">
           {{#each examples}}
@@ -51,9 +51,10 @@
               <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
             <p>
-              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like" data-count={{this.likesNum}}><span>&#x2764;</span>
+              <a data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like"><span>&#x2764;</span>
                 Love
                 it</a>
+              <h4 id="count-{{this.id}}">{{this.likesNum}}</h4>
               <a href="#" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
                 it</a>
             </p>
@@ -74,6 +75,7 @@
   <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
 
 
+
       <p class="footer-text" id="ftext">MEMEARY © 2019</p>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -82,6 +84,7 @@
       </ul>
     </nav>
   </div>
+
 
 
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
