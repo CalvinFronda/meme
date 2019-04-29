@@ -10,9 +10,10 @@ module.exports = function (app) {
       });
     });
   });
-  
-  app.get("/home", function (req, res) {
-    console.log("sefwefd")
+
+
+  app.get("/", function (req, res) {
+
     db.Meme.findAll({}).then(function (dbExamples1) {
       res.render("home", {
         msg: "Welcome!",
@@ -29,6 +30,9 @@ module.exports = function (app) {
       });
     });
   });
+
+
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function (req, res) {

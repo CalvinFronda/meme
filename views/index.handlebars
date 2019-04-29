@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
@@ -23,10 +23,10 @@
       <div class="col-8 offset-2">
         {{!-- <h1>{{msg}}</h1> --}}
 
-              <h2 id="titleTop">MEME UwU</h2>
-        
-   
-    
+        <h2 id="titleTop">MEME UwU</h2>
+
+
+
 
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
@@ -67,16 +67,19 @@
             <a href="example/{{this.id}}">{{this.title}}<br>
               <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
+            <p>
+              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like" data-count="{{this.likesNum}}"><span>&#x2764;</span>
+                Love
+                it</a>
+              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
+                it</a>
+            </p>
+
           </li>
           {{/each}}
         </ul>
 
-        <br>
-        <br>
-<p>
-  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
-  <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#128532;</span>Hate it</a>
-</p>
+
 
 
       </div>

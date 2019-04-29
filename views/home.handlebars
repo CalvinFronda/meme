@@ -28,6 +28,14 @@
             <a href="example/{{this.id}}">{{this.title}}<br>
               <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
+            <p>
+              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like" data-count={{this.likesNum}}><span>&#x2764;</span>
+                Love
+                it</a>
+              <a href="#" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
+                it</a>
+            </p>
+
           </li>
           {{/each}}
         </ul>
