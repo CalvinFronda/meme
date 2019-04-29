@@ -25,7 +25,13 @@
         {{!-- <h1>{{msg}}</h1> --}}
         <h2 id="titleTop">MEMEARY</h2><hr>
         <br>
-        <h3 id="heads1">MEMES:</h3>
+
+<div class="typewriter">
+  <h1>collection of awesome memes</h1>
+</div>
+
+
+        {{!-- <h3 id="heads1">MEMES:</h3> --}}
         <ul id="list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
@@ -50,8 +56,22 @@
     </div>
   </div>
 </div>
+
+
+ <div class="fixed-bottom">
+    <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
+
+      <p class="footer-text" id="ftext">MEMES ©</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-<link rel="stylesheet" href="public/styles/style.css">
+<link rel="stylesheet" href="/styles/style.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
