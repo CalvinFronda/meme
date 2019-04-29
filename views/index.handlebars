@@ -1,34 +1,23 @@
 <nav class="navbar navbar-expand-lg" style="background-color:#383838">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/" id="namebar">
-          <h2>MEME</h2>
-        </a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/create">CREATE +</a>
-        </li>
-      </ul>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" id="namebar">
+        <h2>MEME</h2>
+      </a>
     </div>
-  </nav>
-
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/create">CREATE +</a>
       </li>
-
+    </ul>
+  </div>
+</nav>
 <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         {{!-- <h1>{{msg}}</h1> --}}
-
         <h2 id="titleTop">MEME UwU</h2>
-
 
 
 
@@ -37,76 +26,57 @@
             <label for="example-text" id="heads">Add Meme Title</label>
             <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
           </div>
-
           <div class="form-group">
             <label for="photo" id="heads">Link to Photo Image (Required)</label>
             <input type="text" class="form-control" id="image">
           </div>
         </form>
-
         <div class="form-group">
           <label for="example-description" id="heads">Description</label>
           <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="This meme was created for.. This meme means.."></textarea>
         </div>
-
         <div class="form-group">
           <label for="example" id="heads">Example:</label>
           <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="Ex: This meme is used when..."></textarea>
         </div>
-
         <div class="form-group">
           <label for="example-text" id="heads">Author</label>
           <input type="text" id="author" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
         </div>
-
         <button id="submit" class="btn btn-primary float-right">SUBMIT</button>
-
         </form>
-
         <br>
         {{!-- <h3>Examples:</h3> --}}
         <ul id="list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.title}}<br>
-              <img src={{this.image}}>
-              <br>
-              {{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
+              <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
-            <p>
-              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like" data-count="{{this.likesNum}}"><span>&#x2764;</span>
-                Love
-                it</a>
-              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
-                it</a>
-            </p>
-
           </li>
           {{/each}}
         </ul>
-
-
-
-
+        <br>
+        <br>
+        <p>
+          <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
+          <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#128532;</span>Hate it</a>
+        </p>
       </div>
     </div>
   </div>
 </div>
-
- <div class="fixed-bottom">
-    <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
-
-      <p class="footer-text" id="ftext">MEMES ©</p>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/">HOME</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-
+<div class="fixed-bottom">
+  <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
+    <p class="footer-text" id="ftext">MEMES ©</p>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-
 <link rel="stylesheet" href="/styles/style.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
