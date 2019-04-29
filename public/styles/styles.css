@@ -24,9 +24,11 @@
 
 
 #submit {
-  color: #cabb8a; 
+  color: #383838; 
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  border-color: #cabb8a;
+  background-color: white;
 
 }
 
@@ -38,10 +40,10 @@
   font-family: 'Poppins', sans-serif;
 text-align: center;
 padding: 20px;
-font-size: 35pt;
+font-size: 45pt;
 margin-top: 27px;
 font-weight: bold;
-letter-spacing: 3.5px;
+letter-spacing: 4.5px;
 color: #cabb8a;
 } 
 
@@ -72,6 +74,19 @@ color: #cabb8a;
   margin-left: 10px;
   margin-right: 10px;
 }
+#footer {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #383838;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 
 #namebar {
   text-transform: uppercase;
@@ -93,7 +108,28 @@ color: #cabb8a;
   margin-bottom: 50px;
 }
 
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
 
 
 
