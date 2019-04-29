@@ -1,18 +1,17 @@
-
-  <nav class="navbar navbar-expand-lg" style="background-color:#383838">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/home" id="namebar">
-          <h2>MEME</h2>
-        </a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/create">CREATE +</a>
-        </li>
-      </ul>
+<nav class="navbar navbar-expand-lg" style="background-color:#383838">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" id="namebar">
+        <h2>MEME</h2>
+      </a>
     </div>
-  </nav>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/create">CREATE +</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
 
@@ -23,12 +22,13 @@
     <div class="row">
       <div class="col-8 offset-2">
         {{!-- <h1>{{msg}}</h1> --}}
-        <h2 id="titleTop">MEMEARY</h2><hr>
+        <h2 id="titleTop">MEMEARY</h2>
+        <hr>
         <br>
 
-<div class="typewriter">
-  <h1>collection of awesome memes</h1>
-</div>
+        <div class="typewriter">
+          <h1>collection of awesome memes</h1>
+        </div>
 
 
         {{!-- <h3 id="heads1">MEMES:</h3> --}}
@@ -39,9 +39,10 @@
               <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
             <p>
-              <a href="#" data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like" data-count={{this.likesNum}}><span>&#x2764;</span>
+              <a data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like"><span>&#x2764;</span>
                 Love
                 it</a>
+              <h4 id="count-{{this.id}}">{{this.likesNum}}</h4>
               <a href="#" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
                 it</a>
             </p>
@@ -58,17 +59,17 @@
 </div>
 
 
- <div class="fixed-bottom">
-    <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
+<div class="fixed-bottom">
+  <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
 
-      <p class="footer-text" id="ftext">MEMES ©</p>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/">HOME</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <p class="footer-text" id="ftext">MEMES ©</p>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <link rel="stylesheet" href="/styles/style.css">
