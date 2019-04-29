@@ -47,6 +47,15 @@ letter-spacing: 4.5px;
 color: #cabb8a;
 } 
 
+#desc {
+  font-family: 'Poppins', sans-serif;
+text-align: center;
+font-size: 15pt;
+font-weight: bold;
+letter-spacing: 4.5px;
+color: #383838;
+margin-bottom: 30px;
+} 
 
 .nav-link {
   text-transform: uppercase;
@@ -130,6 +139,8 @@ color: #cabb8a;
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+
 
 
 
