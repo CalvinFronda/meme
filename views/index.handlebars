@@ -2,12 +2,12 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/" id="namebar">
-        <h2>MEME</h2>
+        <h2>MEMEARY<img alt="image" class="responsive" id="icon" src="/styles/images/noun.png"></h2>
       </a>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a class="nav-link" href="/create">CREATE +</a>
+        <a class="nav-link" href="/create">CREATE+</a>
       </li>
     </ul>
   </div>
@@ -18,30 +18,32 @@
       <div class="col-8 offset-2">
         {{!-- <h1>{{msg}}</h1> --}}
         <h2 id="titleTop">MEME UwU</h2>
+        <h3 id="desc">~ MEMES CREATED BY YOU ~</h3><hr>
+        <br>
 
 
 
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text" id="heads">Add Meme Title</label>
-            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+            <input type="text" id="title" class="form-control" aria-describedby="example-text" placeholder="Arthur Fist Meme">
           </div>
           <div class="form-group">
             <label for="photo" id="heads">Link to Photo Image (Required)</label>
-            <input type="text" class="form-control" id="image">
+            <input type="text" class="form-control" id="image" placeholder="">
           </div>
         </form>
         <div class="form-group">
           <label for="example-description" id="heads">Description</label>
-          <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="This meme was created for.. This meme means.."></textarea>
+          <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="Arthur's Fist is a reaction image featuring Arthur from the children's tv series holding a clenched fist, which is often accompanied by captions describing infuriating or frustrating circumstances."></textarea>
         </div>
         <div class="form-group">
           <label for="example" id="heads">Example:</label>
-          <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="Ex: This meme is used when..."></textarea>
+          <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="When you wake up and see you missed the 'you up?' text --- (insert Arthur's fist here)"></textarea>
         </div>
         <div class="form-group">
           <label for="example-text" id="heads">Author</label>
-          <input type="text" id="author" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
+          <input type="text" id="author" class="form-control" aria-describedby="example-text" placeholder="Anonymous">
         </div>
         <button id="submit" class="btn btn-primary float-right">SUBMIT</button>
         </form>
@@ -68,10 +70,10 @@
 </div>
 <div class="fixed-bottom">
   <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
-    <p class="footer-text" id="ftext">MEMES ©</p>
+    <p class="footer-text" id="ftext">MEMEARY © 2019</p>
     <ul class="nav navbar-nav navbar-right">
       <li>
-        <a class="nav-link" href="/">HOME</a>
+        <a class="nav-link" href="/">NVM. GO BACK HOME</a>
       </li>
     </ul>
   </nav>
