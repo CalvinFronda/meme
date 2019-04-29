@@ -23,10 +23,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     likesNum: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
     dislikesNum: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      defaultValue: 0
     },
 
 

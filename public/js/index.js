@@ -6,6 +6,11 @@ var $example = $("#example");
 var $submitBtn = $("#submit");
 var $author = $("#author")
 var $list = $("#list");
+var $like = $("#like");
+var $dislike = $("#dislike");
+
+
+
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -30,8 +35,19 @@ var API = {
       url: "api/examples/" + id,
       type: "DELETE"
     });
-  }
+  },
+  addLike: function (id) {
+    return $.ajax({
+      url: `memes/${id}/likes/increment`,
+      type: "GET"
+    });
+  },
+
 };
+
+
+
+
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function () {
@@ -44,11 +60,14 @@ var refreshExamples = function () {
       var $title = $("<h1>").text(title),
         $image = $("<img>").attr("src", image),
         $wordOne = $("<h5>").text("Author: "),
-        $author = $("<h6>").html(author), 
+        $author = $("<h6>").html(author),
         $wordTwo = $("<h5>").text("Description: "),
         $description = $("<h6>").text(description),
         $wordThree = $("<h5>").text("Example: "),
         $example = $("<h6>").text(example);
+
+
+
 
 
       var $li = $("<li>")
@@ -94,7 +113,7 @@ var handleFormSubmit = function (event) {
   // }
 
   API.saveExample(Meme).then(function () {
-    console.log("hit")
+
     refreshExamples();
   });
 
@@ -115,35 +134,55 @@ var handleDeleteBtnClick = function () {
 };
 
 
+
 //BUTTON LIKE & DISLIKE
-$('.btn-counter').on('click', function(event, count) {
+// $('#like').on('click', function (event, count) {
+//   event.preventDefault();
+
+//   var $this = $(this),
+//     count = $this.attr('data-count'),
+//     active = $this.hasClass('active'),
+//     multiple = $this.hasClass('multiple-count');
+
+//   // First method, allows to add custom function
+//   // Use when you want to do an ajax request
+//   if (multiple) {
+//     $this.attr('data-count', ++count);
+//     // Your code here
+//   } else {
+//     $this.attr('data-count', active ? --count : ++count).toggleClass('active');
+//     // Your code here
+//   }
+
+
+
+//   // Second method, use when ... I dunno when but it looks cool and that's why it is here
+//   $.fn.noop = $.noop;
+//   $this.attr('data-count', !active || multiple ? ++count : --count)[multiple ? 'noop' : 'toggleClass']('active');
+
+// });
+
+//handles the like button click 
+$(".likes").on("click", function (event, id) {
   event.preventDefault();
-  
-  var $this = $(this),
-      count = $this.attr('data-count'),
-      active = $this.hasClass('active'),
-      multiple = $this.hasClass('multiple-count');
-  
-  // First method, allows to add custom function
-  // Use when you want to do an ajax request
-  /* if (multiple) {
-  $this.attr('data-count', ++count);
-  // Your code here
-  } else {
-  $this.attr('data-count', active ? --count : ++count).toggleClass('active');
-  // Your code here
-  } */
-  
-  // Second method, use when ... I dunno when but it looks cool and that's why it is here
-  $.fn.noop = $.noop;
-  $this.attr('data-count', ! active || multiple ? ++count : --count  )[multiple ? 'noop' : 'toggleClass']('active');
-  
-});
+  var id = $(this)
+    .parent().parent()
+    .attr("data-id");
+
+  console.log(id);
+
+  API.addLike(id);
+
+
+})
+
+
 
 
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $list.on("click", ".delete", handleDeleteBtnClick);
+
 
 
