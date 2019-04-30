@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "something",
+    "password": "lol",
     "database": "memesDB",
     "host": "localhost",
     "dialect": "mysql"
