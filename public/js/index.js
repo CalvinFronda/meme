@@ -42,6 +42,13 @@ var API = {
       type: "GET"
     });
   },
+  addDislike: function (id) {
+    return $.ajax({
+      url: `/memes/${id}/dislikes/increment`,
+      type: "GET"
+    })
+  }
+
 
 };
 
@@ -130,8 +137,8 @@ var handleDeleteBtnClick = function () {
 };
 
 
-//handles the like button click 
-$(".likes").on("click", function (event, id) {
+
+$(".likes").one("click", function (event, id) {
   event.preventDefault();
   var id = $(this)
     .parent().parent()
@@ -143,6 +150,24 @@ $(".likes").on("click", function (event, id) {
     console.dir($(`#count-${id}`));
     console.log(likesNum);
     return $(`#count-${id}`).text(`${likesNum}`);
+  }).catch(err => {
+    console.error(err);
+  })
+
+});
+
+$(".dislike").one("click", function (event, id) {
+  event.preventDefault();
+  var id = $(this)
+    .parent().parent()
+    .attr("data-id");
+
+  console.log(id);
+
+  API.addDislike(id).then(({ dislikesNum }) => {
+    console.dir($(`#count-${id}`));
+    console.log(dislikesNum);
+    return $(`#counts-${id}`).text(`${dislikesNum}`);
   }).catch(err => {
     console.error(err);
   })

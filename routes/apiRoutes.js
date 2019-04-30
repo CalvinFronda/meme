@@ -33,8 +33,20 @@ module.exports = function (app) {
       res.sendStatus(500);
     }
   });
-  //I need to update the likesNum inside the sql database after
-  //the like button is pressed.
+
+  app.get('/memes/:id/dislikes/increment', async (req, res) => {
+    try {
+      let meme = await db.Meme.findByPk(req.params.id);
+
+      await meme.increment('dislikesNum', { by: 1 });
+      await meme.reload();
+      res.json(meme);
+    } catch (err) {
+      res.sendStatus(500);
+    }
+  });
+
+
   app.put('/api/examples/:id', (req, res) => {
     db.Meme.update(
       { likesNum: req.body.likeNum },

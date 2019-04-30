@@ -180,10 +180,10 @@ margin-bottom: 30px;
 /*
  * Counter button style
  */
-.btn-counter { margin-right: 39px; }
+/* .btn-counter { margin-right: 39px; } */
 .btn-counter:after,
 .btn-counter:hover:after { text-shadow: none; }
-.btn-counter:after {
+/* .btn-counter:after {
   border-radius: 3px;
   border: 1px solid #d3d3d3;
   background-color: #eee;
@@ -195,8 +195,8 @@ margin-bottom: 30px;
   margin-right: -13px;
   position: absolute;
   top: -1px;
-}
-.btn-counter:before {
+} */
+/* .btn-counter:before {
   transform: rotate(45deg);
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476, sizingMethod='auto expand');
 
@@ -212,7 +212,7 @@ margin-bottom: 30px;
   width: 6px;
   z-index: 1;
   zoom: 1;
-}
+} */
 /*
  * Custom styles
  */
@@ -235,3 +235,4 @@ margin-bottom: 30px;
   color: #b12f27;
   text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
+
