@@ -1,23 +1,20 @@
+<nav class="navbar navbar-expand-lg" style="background-color:#383838">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" id="namebar">
+        <h2>MEMEARY<img alt="image" class="responsive" id="icon" src="/styles/images/noun.png">
+        </h2>
 
-
-
-  <nav class="navbar navbar-expand-lg" style="background-color:#383838">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/" id="namebar">
-          <h2>MEMEARY<img alt="image" class="responsive" id="icon" src="/styles/images/noun.png">
-          </h2>
-
-        </a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/create">CREATE+</a>
-        </li>
-      </ul>
-
-
+      </a>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/create">CREATE+</a>
+      </li>
+    </ul>
+
+
+  </div>
 
   </div>
 </nav>
@@ -42,17 +39,21 @@
         {{!-- <h3 id="heads1">MEMES:</h3> --}}
         <ul id="list" class="list-group">
           {{#each examples}}
+
           <li data-id="{{this.id}}" class="list-group-item">
             <a href="example/{{this.id}}">{{this.title}}<br>
-              <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
+              <img src={{this.image}}><br>{{this.description}}<br>
+              {{this.author}}<br>{{this.createdAt}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
             <p>
-              <a data-id="{{this.id}}" title="Love it" class="btn btn-counter likes" id="like"><span>&#x2764;</span>
-                Love
+              <a data-id="{{this.id}}" title="Love it" class="btn btn-counter likes"><span>&#x2764;</span>
+                Love it
+              </a>
+              <span id="count-{{this.id}}">{{this.likesNum}}</span>
+              <a data-id="{{this.id}}" title="Love it" class="btn btn-counter dislike"><span>&#128532;</span>Hate
                 it</a>
-              <h4 id="count-{{this.id}}">{{this.likesNum}}</h4>
-              <a href="#" title="Love it" class="btn btn-counter" id="dislike" data-count="0"><span>&#128532;</span>Hate
-                it</a>
+              <span id="counts-{{this.id}}">{{this.dislikesNum}}</span>
+
             </p>
 
           </li>
@@ -66,20 +67,21 @@
   </div>
 </div>
 
+<br>
 
 <div class="fixed-bottom">
   <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
 
 
 
-      <p class="footer-text" id="ftext">MEMEARY © 2019</p>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a class="nav-link" href="/">HOME</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+    <p class="footer-text" id="ftext">MEMEARY © 2019</p>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+    </ul>
+  </nav>
+</div>
 
 
 
