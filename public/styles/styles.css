@@ -85,6 +85,7 @@ p {
 
 
 
+
 .nav-link {
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -96,6 +97,7 @@ p {
   font-size: 14px;
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center
 }
 
 
@@ -277,4 +279,5 @@ text-align: center;
   color: #b12f27;
   text-shadow: 0 1px 0 rgba(255,255,255,0.3);
 }
+
 
