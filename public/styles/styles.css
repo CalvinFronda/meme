@@ -1,3 +1,5 @@
+
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -22,6 +24,11 @@
 
 }
 
+img{
+  width: 100%;
+  height: auto
+}
+
 
 #submit {
   color: #383838; 
@@ -37,18 +44,25 @@
 }
 
 #titleTop {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Poppins', sans-serif;
 text-align: center;
 padding: 20px;
-font-size: 45pt;
 margin-top: 27px;
 font-weight: bold;
 letter-spacing: 4.5px;
 color: #cabb8a;
+font-size :calc(0.06*100vw + 0px);
+
+
 } 
 
+h2{
+  font-size: 25px;
+}
+
+
 #desc {
-  font-family: 'Poppins', sans-serif;
+font-family: 'Poppins', sans-serif;
 text-align: center;
 font-size: 15pt;
 font-weight: bold;
@@ -62,7 +76,15 @@ h5{
 }
 h6 {
   font-weight: bold;
+  color : black;
 }
+
+p {
+  color : black;
+}
+
+
+
 .nav-link {
   text-transform: uppercase;
   font-family: 'Poppins', sans-serif;
@@ -100,7 +122,10 @@ h6 {
   font-size: 14px;
   margin-left: 10px;
   margin-right: 10px;
+  height: 5%;
+  
 }
+
 
 
 #namebar {
@@ -116,23 +141,29 @@ h6 {
   margin-right: 10px;
 }
 
-#image {
-  max-width: 100%;
-  height: auto;
+#icon {
+  max-width: 50%;
+  height: 90px;
   width: 100%;
-  margin-bottom: 50px;
+
+
 }
 
-.typewriter h1 {
+
+.typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
+   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
-}
+text-align: center; 
+
+ 
+
+  }
 
 /* The typing effect */
 @keyframes typing {

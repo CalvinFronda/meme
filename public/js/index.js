@@ -78,13 +78,13 @@ var refreshExamples = function () {
           class: "list-group-item",
           "data-id": id,
         })
-        .append($title, $image, $wordOne, $author, $wordTwo, $description, $wordThree, $example);
+        .append($image, $title, $wordOne, $author, $wordTwo, $description, $wordThree, $example);
 
       var $button = $("<button>")
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
-      $li.append($button);
+      $li.prepend($button);
 
       return $li;
     });
