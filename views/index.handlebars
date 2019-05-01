@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg" style="background-color:#383838">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" id="namebar">
+        <h2>MEMEARY<img alt="image" class="responsive" id="icon" src="/styles/images/noun.png"></h2>
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/create">CREATE+</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        {{!-- <h1>{{msg}}</h1> --}}
+        <h2 id="titleTop">MEME UwU</h2>
+        <h3 id="desc">~ MEMES CREATED BY YOU ~</h3>
+        <hr>
+        <br>
+
+
+
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text" id="heads">Add Meme Title:</label>
+            <input autocomplete="off" type="text" id="title" class="form-control" aria-describedby="example-text"
+              placeholder="Arthur Fist Meme">
+          </div>
+          <div class="form-group">
+            <label for="photo" id="heads">Link to Photo Image (Required):</label>
+            <input type="text" class="form-control" id="image" placeholder="">
+          </div>
+        </form>
+        <div class="form-group">
+          <label for="example-description" id="heads">About the Meme:</label>
+          <textarea class="form-control" id="description" aria-describedby="example-description" placeholder="Arthur's Fist is a reaction image featuring Arthur from the children's tv series holding a clenched fist, which is often accompanied by captions describing infuriating or frustrating circumstances."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="example" id="heads">Example:</label>
+          <textarea class="form-control" id="example" aria-describedby="example-description" placeholder="When you wake up and see you missed the 'you up?' text --- (insert Arthur's fist here)"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="example-text" id="heads">Author:</label>
+          <input autocomplete="off" type="text" id="author" class="form-control" aria-describedby="example-text"
+            placeholder="Anonymous">
+          <button id="submit" class="btn btn-primary float-right">SUBMIT</button>
+        </div>
+        </form>
+        <br>
+        <br>
+
+        {{!-- <h3>Examples:</h3>
+        <ul id="list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.title}}<br>
+              <img src={{this.image}}>{{this.description}}<br>{{this.author}}<br>{{this.createdAt}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+        <br>
+        <br>
+        <p>
+          <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#x2764;</span> Love it</a>
+          <a href="#" title="Love it" class="btn btn-counter" data-count="0"><span>&#128532;</span>Hate it</a>
+        </p> --}}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-footer">
+  <nav class="navbar fixed-bottom navbar-light" id="footer" style="background-color:white">
+    <p class="footer-text" id="ftext">MEMEARY © 2019</p>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="nav-link" href="/">NVM. GO BACK HOME</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+<link rel="stylesheet" href="/styles/style.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous">
+<script src="js/index.js"></script>
