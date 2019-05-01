@@ -5,7 +5,7 @@ var path = require("path");
 var Sequelize = require("sequelize");
 var basename = path.basename(module.filename);
 var env = process.env.JAWSDB_URL || "development";
-var config = path.resolve(__dirname + "/../config/config.json")[env];
+var config = path.resolve("/config/config.json")[env];
 var db = {};
 
 
