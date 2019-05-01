@@ -59,7 +59,6 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshExamples = function () {
   API.getExamples().then(function (data) {
-    console.log(data);
 
 
 
@@ -84,11 +83,12 @@ var refreshExamples = function () {
         .addClass("btn btn-danger float-right delete")
         .text("ｘ");
 
-      $li.prepend($button);
+      $li.append($button);
 
       return $li;
     });
-    console.log(memes);
+
+
 
     $list.html(memes);
   });
@@ -122,6 +122,9 @@ var handleFormSubmit = function (event) {
 
   $example.val("");
   $description.val("");
+  $title.val("");
+  $image.val("");
+  $author.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
